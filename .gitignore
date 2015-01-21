@@ -1,0 +1,7 @@
+composer.lock
+phpmd.html
+.idea/
+doc/
+reports/
+vendor/
+tmp/

@@ -1,0 +1,30 @@
+{
+  "name": "jopic/productdb",
+  "description": "",
+  "version": "1.0.0",
+  "require": {
+    "doctrine/common": "*",
+    "hafriedlander/phockito": "1.0.*",
+    "doctrine/mongodb-odm": "~1.0.0-BETA10@dev"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.0.*",
+    "phpmd/phpmd" : "@stable"
+  },
+  "autoload": {
+    "psr-4": {
+      "Jopic\\": "src/Jopic",
+      "Jopic\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "doc": "vendor/bin/phpdoc",
+    "md": "tools/phpmd",
+    "pre-commit":
+    [
+      "vendor/bin/phpunit",
+      "tools/phpmd"
+    ]
+  }
+}
